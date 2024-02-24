@@ -15,7 +15,7 @@ function countWordForms(text) {
     return counterWords
 }
 
-document.getElementById("fileInput").addEventListener("change", (event) => {
+document.getElementById("fileInput").addEventListener("change", () => {
     const fileInput = document.getElementById("fileInput")
     if (fileInput.files.length > 0) {
         const selectedFile = fileInput.files[0]
@@ -27,9 +27,6 @@ document.getElementById("fileInput").addEventListener("change", (event) => {
                 return pair1[1] - pair2[1]
             })
             document.getElementById("content").textContent = fileContent
-            //document.getElementById("pairsText").textContent = pairsSort.reverse().map((item, index) => {
-            //    return `${item[0]}, ${item[1]}\n` 
-            //  }).join("\n")
             pairsSort.reverse().forEach((item) => {
                 const pair = `${item[0]}: ${item[1]}`
                 const div = document.createElement("div")
