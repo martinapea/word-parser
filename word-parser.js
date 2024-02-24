@@ -27,6 +27,7 @@ document.getElementById("fileInput").addEventListener("change", () => {
                 return pair1[1] - pair2[1]
             })
             document.getElementById("content").textContent = fileContent
+            document.getElementById("pairsText").innerHTML = ""
             pairsSort.reverse().forEach((item) => {
                 const pair = `${item[0]}: ${item[1]}`
                 const div = document.createElement("div")
